@@ -65,18 +65,73 @@ function powersOfTwo (nums) {
 
 }
 
-function areWeThereYet () {
+function areWeThereYet (response) {
+
+    var message = "Are we there yet? </br>";
+    var input = document.getElementById("input-field");
+
+    if (response === undefined) {
+
+        response = "";
+        input.style.display = 'inline';
+        display.innerHTML = "";
+
+    } else if (response.toLowerCase() === "yes</br>") {
+        message = "Good!"
+        input.style.display = 'none';
+    }
+
+    display.innerHTML += response + message;
 
 }
 
 function triangle () {
 
+    var triangle = "";
+
+    for (var i = 1; i < 6; i++) {
+        for (var j = 0; j < i; j++) {
+            triangle += "*";
+        }
+        triangle += "</br>";
+    }
+
+    display.innerHTML = triangle;
+
 }
 
 function tableSquare () {
+    var tableSquare = "";
+
+    for (var i = 1; i < 5; i++) {
+        for (var j = 0; j < 4; j++) {
+            tableSquare += "|" + (i + j*i);
+        }
+        tableSquare += "| </br>";
+    }
+
+    display.innerHTML = tableSquare;
 
 }
 
-function tableSquares () {
+function tableSquares (num) {
 
+    var tableSquare = "";
+
+    for (var i = 1; i <= num; i++) {
+        for (var j = 0; j < num; j++) {
+            tableSquare += "|" + (i + j*i);
+        }
+        tableSquare += "| </br>";
+    }
+
+    display.innerHTML = tableSquare;
+
+}
+
+function thereYet () {
+
+    var input = document.getElementById("user-input");
+
+    areWeThereYet(input.value + "</br>");
 }
