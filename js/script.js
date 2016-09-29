@@ -68,19 +68,22 @@ function powersOfTwo (nums) {
 function areWeThereYet (response) {
 
     var message = "Are we there yet? </br>";
-    var input = document.getElementById("input-field");
+    var inputField = document.getElementById("input-field");
+    var input = document.getElementById("user-input");
 
     if (response === undefined) {
 
         response = "";
-        input.style.display = 'inline';
+        inputField.style.display = 'inline';
         display.innerHTML = "";
 
     } else if (response.toLowerCase() === "yes</br>") {
         message = "Good!"
-        input.style.display = 'none';
+        inputField.style.display = 'none';
     }
 
+
+    input.value = "";
     display.innerHTML += response + message;
 
 }
