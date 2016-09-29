@@ -114,7 +114,7 @@ section {margin:10px;}
 h1 {font-weight: bold; margin-left: 10px;}
 #main {
 
-    margin-left: 140px;
+    margin-left: 160px;
 }
 #display {
     border: 1px #aaa solid;
@@ -137,5 +137,5 @@ h1 {font-weight: bold; margin-left: 10px;}
 }
 
 #menu button {
-    width: 120px;
+    width: 140px;
 }
